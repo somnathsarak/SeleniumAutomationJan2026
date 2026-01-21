@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Selenium Automation Test Suite" parallel="false" verbose="2">
+    <listeners>
+        <listener class-name="com.automation.listeners.ExtentReportListener" />
+    </listeners>
+    
+    <test name="Login Tests">
+        <classes>
+            <class name="com.automation.tests.LoginTests">
+                <methods>
+                    <include name="validLoginTest" />
+                    <include name="emptyUsernameTest" />
+                    <include name="emptyPasswordTest" />
+                    <include name="invalidCredentialsTest" />
+                    <include name="specialCharactersTest" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
